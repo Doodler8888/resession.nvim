@@ -219,6 +219,7 @@ local function save(name, opts, target_tabpage)
     tabs = {},
     tab_scoped = target_tabpage ~= nil,
     global = {
+      tab_names = {},
       cwd = vim.fn.getcwd(-1, -1),
       height = vim.o.lines - vim.o.cmdheight,
       width = vim.o.columns,
