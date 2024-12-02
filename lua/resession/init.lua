@@ -308,7 +308,7 @@ M.save = function(name, opts)
     name = current_session
   end
   if not name then
-    vim.ui.input({ prompt = "Session name " }, function(selected)
+    vim.ui.input({ prompt = "Session name: " }, function(selected)
       if selected then
         M.save(selected, opts)
       end
@@ -337,7 +337,7 @@ M.save_tab = function(name, opts)
     name = tab_sessions[cur_tabpage]
   end
   if not name then
-    vim.ui.input({ prompt = "Session name " }, function(selected)
+    vim.ui.input({ prompt = "Session name: " }, function(selected)
       if selected then
         M.save_tab(selected, opts)
       end
